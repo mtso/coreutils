@@ -4,7 +4,7 @@ use std::io::*;
 use std::vec::Vec;
 
 pub fn cat(path: String) -> Result<()> {
-    let mut f = File::open(path).expect("File not found");
+    let mut f = File::open(path)?;
     let mut buf: Vec<u8> = Vec::new();
 
     f.read_to_end(&mut buf)?;
