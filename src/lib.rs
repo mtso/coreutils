@@ -4,10 +4,9 @@ use std::io::*;
 use std::vec::Vec;
 
 pub fn cat(path: String) -> Result<()> {
-    let mut f = File::open(path)?;
     let mut buf: Vec<u8> = Vec::new();
 
-    f.read_to_end(&mut buf)?;
+    File::open(path)?.read_to_end(&mut buf)?;
     io::stdout().write_all(buf.as_slice())?;
     Ok(())
 }
