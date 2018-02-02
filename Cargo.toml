@@ -1,0 +1,10 @@
+[package]
+name = "coreutils"
+version = "0.1.0"
+authors = ["mtso <~@mtso.io>"]
+
+[dependencies]
+
+[[bin]]
+name = "cat"
+path = "src/bin/cat/main.rs"
